@@ -18,3 +18,5 @@ Point your browser to `http://localhost:7080`
 2.2 - Remove commented out code and merge to master
 
 2.3 - Replace ubuntu image by ruby:2.2.2 image
+
+2.4 - The-internet now runs on ruby 2.2.5
