@@ -1,4 +1,4 @@
-FROM ruby:2.2.5
+FROM ruby:2.6.3
 
 MAINTAINER Guilherme Heuser Prestes <guilherme.prestes@gmail.com>
 
