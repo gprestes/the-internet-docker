@@ -1,4 +1,4 @@
-FROM ruby:2.2.5
+FROM ruby:2.4.1
 
 RUN git clone https://github.com/tourdedave/the-internet.git app
 WORKDIR /app
