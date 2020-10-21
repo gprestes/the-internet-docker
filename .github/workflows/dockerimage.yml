@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run hadolint
       run: make lint-docker
-    - name: Run hadolint
+    - name: Run shellcheck
       run: make lint-shell
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag the-internet-docker:$(date +%s)

@@ -23,4 +23,4 @@ lint-docker: tools/hadolint/$(HADOLINT_VERSION)/hadolint
 
 .PHONY: lint-shell
 lint-shell: tools/shellcheck-stable/shellcheck
-	find . | grep -v vendor | grep '\.sh' | xargs tools/shellcheck-stable/shellcheck
+	find . | grep '\.sh' | xargs tools/shellcheck-stable/shellcheck
