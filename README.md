@@ -9,14 +9,4 @@ Point your browser to `http://localhost:7080`
 
 **Tag History:**
 
-1.0 - First image version
-
-2.0 - Improvements following best practices
-
-2.1 - Install ruby using ruby-install instead of RVM
-
-2.2 - Remove commented out code and merge to master
-
-2.3 - Replace ubuntu image by ruby:2.2.2 image
-
-2.4 - The-internet now runs on ruby 2.2.5
+v2.4.1: Uses Ruby 2.4.1
