@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker pull ruby:2.4.1
+docker pull ruby:2.6.5
 docker build --rm -t gprestes/the-internet .
