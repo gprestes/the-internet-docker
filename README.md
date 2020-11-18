@@ -2,7 +2,7 @@
 Docker image with the-internet app
 
 ## To execute the application:
-Run this command: `docker run -d -p 7080:5000 gprestes/the-internet`
+Run this command: `docker run -d -p 7080:5000 gprestes/the-internet:v2.6.5`
 
 ## To access the application
 Point your browser to `http://localhost:7080`
