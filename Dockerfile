@@ -1,4 +1,4 @@
-FROM ruby:2.7.2
+FROM ruby:3.1.0
 
 RUN git clone https://github.com/saucelabs/the-internet.git app
 WORKDIR /app
