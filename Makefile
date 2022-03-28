@@ -1,7 +1,7 @@
 SHELL := /bin/bash -eu
 
-HADOLINT_VERSION      := 1.18.2
-SHELLCHECK_VERSION    := 0.7.1
+HADOLINT_VERSION      := 2.8.0
+SHELLCHECK_VERSION    := 0.8.0
 HARDWARE_NAME         := $(shell uname -m)
 SYSTEM_NAME           := $(shell uname -s | tr A-Z a-z)
 
