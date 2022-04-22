@@ -6,16 +6,16 @@ jobs:
   hadolint:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3.0.0
+      - uses: actions/checkout@v3.0.2
       - run: make lint-docker
   shellcheck:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3.0.0
+      - uses: actions/checkout@v3.0.2
       - run: make lint-shell
   build:
     needs: [hadolint, shellcheck]
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3.0.0
+      - uses: actions/checkout@v3.0.2
       - run: docker build . --file docker/Dockerfile --tag the-internet-docker:$(date +%s)
