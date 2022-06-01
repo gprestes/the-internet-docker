@@ -13,8 +13,21 @@ jobs:
     steps:
       - uses: actions/checkout@v3.0.2
       - run: make lint-shell
+  golangci:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-go@v3.2.0
+        with:
+          go-version: 1.18
+      - uses: actions/checkout@v3.0.2
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v3.2.0
+        with:
+          working-directory: tests/
+          args: --timeout 3m0s
   terratest:
-    needs: [hadolint, shellcheck]
+    needs: [hadolint, shellcheck, golangci]
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3.0.2
