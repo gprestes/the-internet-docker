@@ -42,6 +42,7 @@ jobs:
         working-directory: tests/
         run: go test -v
   build:
+    if: ${{ github.ref_name == 'main' }}
     needs: [terratest]
     runs-on: ubuntu-20.04
     steps:
