@@ -1,6 +1,6 @@
 module github.com/gprestes/the-internet-docker
 
-go 1.18
+go 1.20
 
 require (
 	github.com/gruntwork-io/terratest v0.40.22
