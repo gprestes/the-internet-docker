@@ -4,11 +4,15 @@
         "enabled": true,
         "extends": "schedule:daily"
     },
-    "packageRules": [{
-        "matchDepTypes": ["devDependencies"],
-        "automerge": true
-    }, {
-        "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-        "automerge": true
-    }]
+    "platformAutomerge": true,
+    "packageRules": [
+        {
+            "description": "Automerge non-major updates",
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ],
+            "automerge": true
+        }
+    ]
 }
