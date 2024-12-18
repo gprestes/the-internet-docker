@@ -4,12 +4,12 @@ on: [push]
 
 jobs:
   hadolint:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4.2.2
       - run: make lint-docker
   shellcheck:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4.2.2
       - run: make lint-shell
@@ -28,7 +28,7 @@ jobs:
           args: --timeout 3m0s
   terratest:
     needs: [hadolint, shellcheck, golangci]
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4.2.2
       - name: Set up go
@@ -44,7 +44,7 @@ jobs:
   build:
     if: ${{ github.ref_name == 'main' }}
     needs: [terratest]
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4.2.2
       - run: docker build . --file docker/Dockerfile --tag the-internet-docker:$(date +%s)
