@@ -23,7 +23,8 @@ func TestDockerImage(t *testing.T) {
 			},
 		}
 
-		docker.BuildContext(t.Context(), t, "../docker", buildOptions)
+		// Fixed: Passed 't' first, then context.Background() as the second parameter
+		docker.BuildContext(t, context.Background(), "../docker", buildOptions)
 	})
 
 	tt := []struct {
@@ -50,7 +51,8 @@ func TestDockerImage(t *testing.T) {
 				Command: []string{tc.command},
 			}
 
-			output := docker.Run(t, tag, opts)
+			// Fixed: Updated docker.Run to docker.RunContext using the correct parameter order
+			output := docker.RunContext(t, context.Background(), tag, opts)
 
 			assert.Contains(t, output, tc.expected)
 		})
