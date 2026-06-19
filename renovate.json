@@ -6,21 +6,10 @@
             "schedule:daily"
         ]
     },
-    "platformAutomerge": true,
-    "packageRules": [
-        {
-            "description": "Automerge non-major updates",
-            "matchUpdateTypes": [
-                "minor",
-                "patch"
-            ],
-            "automerge": true
-        }
-    ],
-  "separateMajorMinor": true,
-  "separateMultipleMajor": true,
-  "separateMultipleMinor": true,
-  "separateMinorPatch": true,
+    "separateMajorMinor": true,
+    "separateMultipleMajor": true,
+    "separateMultipleMinor": true,
+    "separateMinorPatch": true,
     "extends": [
         "config:recommended"
     ]
