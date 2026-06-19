@@ -1,8 +1,9 @@
 package test
 
 import (
+	"context"
 	"testing"
-
+	
 	"github.com/gruntwork-io/terratest/modules/docker"
 	test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
 	"github.com/stretchr/testify/assert"
@@ -22,7 +23,7 @@ func TestDockerImage(t *testing.T) {
 			},
 		}
 
-		docker.Build(t, "../docker", buildOptions)
+		docker.BuildContext(t.Context(), t, "../docker", buildOptions)
 	})
 
 	tt := []struct {
