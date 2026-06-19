@@ -1,6 +1,7 @@
 package test
 
 import (
+	"context"
 	"testing"
 
 	"github.com/gruntwork-io/terratest/modules/docker"
@@ -22,7 +23,8 @@ func TestDockerImage(t *testing.T) {
 			},
 		}
 
-		docker.Build(t, "../docker", buildOptions)
+		// Fix: Use docker.BuildContext and pass a context as the first argument
+		docker.BuildContext(t.Context(), t, "../docker", buildOptions)
 	})
 
 	tt := []struct {
