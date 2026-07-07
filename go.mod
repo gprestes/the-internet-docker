@@ -2,7 +2,7 @@ module github.com/gprestes/the-internet-docker
 
 go 1.26.0
 
-toolchain go1.26.4
+toolchain go1.26.5
 
 require (
 	github.com/gruntwork-io/terratest v1.0.1
